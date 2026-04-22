@@ -10,7 +10,7 @@
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <!-- ✅ Java 17 configuration -->
+    <!-- ✅ Java 17 -->
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,7 +28,7 @@
         <!-- MySQL -->
         <dependency>
             <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <artifactId>mysql-connector-j</artifactId>
             <version>8.0.33</version>
         </dependency>
 
@@ -43,8 +43,8 @@
     <build>
         <finalName>employee-management</finalName>
 
-        <!-- ✅ Recommended for Java 17 -->
         <plugins>
+            <!-- ✅ Java 17 Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -52,6 +52,13 @@
                 <configuration>
                     <release>17</release>
                 </configuration>
+            </plugin>
+
+            <!-- ✅ CRITICAL FIX: WAR plugin updated -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
             </plugin>
         </plugins>
     </build>
