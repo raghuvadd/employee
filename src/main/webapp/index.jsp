@@ -6,6 +6,7 @@
     ID: <input type="text" name="id"/><br/>
     Name: <input type="text" name="name"/><br/>
     Department: <input type="text" name="department"/><br/>
+    Age: <input type="text" name="age"/><br/>
     <input type="submit" value="Add Employee"/>
 </form>
 
